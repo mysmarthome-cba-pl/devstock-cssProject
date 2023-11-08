@@ -33,13 +33,14 @@ html {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  padding: 0% 10%;
+  padding: 0% 8%;
 }
 
 .navbarElements {
   display: flex;
   width: 1280px;
   align-items: center;
+  padding-left: 5%;
   gap: 4em;
 }
 
@@ -53,6 +54,11 @@ html {
   display: flex;
   align-items: center;
   gap: 1em;
+  margin-right: 20%;
+}
+
+.toggleMenu {
+  display: none;
 }
 
 .hiro {
@@ -141,10 +147,38 @@ button {
 
 .socialProof {
   display: flex;
-  width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 2em;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-700);
+  background: var(--gray-800);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.socialProofElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.socialProofElement_title {
+  color: var(--white);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 125%;
+}
+
+.socialProofElement_description {
+  color: var(--gray-600);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 .containerCTA {
@@ -409,21 +443,40 @@ td {
 }
 
 .footer {
+  padding: 32px 16px;
   display: flex;
-  width: 1440px;
-  padding: 96px 0px 64px 0px;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 64px;
   align-items: center;
-  border-top: 1px solid var(--gray-700);
-  background: var(--gray-800);
-  padding: 1em;
 }
 
-.footerText {
-  color: var(--gray-400);
-  font-size: 1em;
+.footerElement {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerElement_text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   font-weight: 400;
   line-height: 150%;
+  list-style: none;
+}
+
+.footerColumnLink {
+  color: var(--gray-400);
+  text-decoration: none;
 }
 
 .socialLink {
@@ -432,8 +485,152 @@ td {
   gap: 1.5em;
 }
 
-.footerTable {
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 2%;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  body {
+    background-color: #de3163;
+    zoom: (current screen width) / (width);
+  }
+
+  .navbar {
+    align-content: left;
+  }
+
+  .navbarElements {
+    display: none;
+  }
+
+  .navbarLogin {
+    display: none;
+  }
+
+  .leftContent {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .socialProof {
+    display: none;
+  }
+
+  .toggleMenu {
+    display: flex;
+  }
+
+  .hiro {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .hiro .leftContent {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .hiro .heading {
+    font-size: 3em;
+    line-height: 30px;
+  }
+
+  .socialProof {
+    max-width: 480px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .containerCTA {
+    max-width: 480px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .row {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .rightContent {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .costumerLogos {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 3em 1em;
+  }
+
+  .costumerLogos .container {
+    padding-left: 20%;
+  }
+
+  .CTA {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .CTA .container {
+    max-width: 480px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .rightTextCTA {
+    color: var(--gray-400);
+    text-align: right;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  progress {
+    width: 35em;
+    border-radius: 2px;
+    background: var(--gray-700);
+  }
+
+  .blog {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .blogContainer {
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  td {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contactContainer {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .contactForm {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }
