@@ -42,7 +42,7 @@ html {
   gap: 4em;
 }
 
-.navbar .text {
+.navbar > .text {
   text-align: center;
   font-weight: 500;
   line-height: 150%;
@@ -72,14 +72,13 @@ html {
   align-items: center;
 }
 
-.hiro .leftContent {
-  width: 576px;
+.hiro > .leftContent {
   flex-direction: column;
   gap: 24px;
   flex-shrink: 0;
 }
 
-.hiro .heading {
+.hiro > .heading {
   font-size: 3em;
   font-weight: 800;
   line-height: 100%;
@@ -93,7 +92,7 @@ html {
   gap: 24px;
 }
 
-.hiro .carousel {
+.carousel {
   display: flex;
   padding: 3em 3em 5em 5em;
   justify-content: center;
@@ -490,13 +489,10 @@ td {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  body {
-    background-color: #de3163;
-    zoom: (current screen width) / (width);
-  }
-
-  .navbar {
-    align-content: left;
+  html {
+    align-items: center;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .navbarElements {
@@ -507,6 +503,12 @@ td {
     display: none;
   }
 
+  h1 .heading {
+    max-width: 480px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
   .leftContent {
     max-width: 480px;
     margin: 0 auto;
@@ -515,10 +517,17 @@ td {
   .socialProof {
     max-width: 480px;
     margin: 0 auto;
+    flex-direction: column;
   }
 
-  .toggleMenu {
+  .containerCTA > .row img {
+    display: none;
+  }
+
+  .toggleMenu img {
     display: flex;
+    align-items: right;
+    max-width: 480px;
   }
 
   .hiro {
@@ -529,12 +538,14 @@ td {
   .hiroButtons {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .container {
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   .hiro .leftContent {
@@ -550,7 +561,6 @@ td {
   .socialProof {
     max-width: 480px;
     margin: 0 auto;
-    align-items: center;
     gap: 2em;
   }
 
@@ -565,6 +575,7 @@ td {
   .row {
     max-width: 480px;
     margin: 0 auto;
+    flex-direction: column;
   }
 
   .rightContent {
@@ -572,19 +583,14 @@ td {
     margin: 0 auto;
   }
 
-  .costumerLogos {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 3em 1em;
-  }
-
-  .costumerLogos .container {
-    padding-left: 20%;
+  .costumerLogos > .container {
+    padding-left: 0%;
   }
 
   .CTA {
     max-width: 480px;
     margin: 0 auto;
+    flex-direction: column;
   }
 
   .CTA .container {
@@ -603,25 +609,14 @@ td {
     line-height: 150%;
   }
 
-  .blog {
+  .cards {
     max-width: 480px;
     margin: 0 auto;
+    display: grid;
   }
 
   .blogContainer {
-    display: flex;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  td {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  .contact {
-    max-width: 480px;
-    margin: 0 auto;
+    display: none;
   }
 
   .contactContainer {
@@ -637,5 +632,6 @@ td {
   .footer {
     max-width: 480px;
     margin: 0 auto;
+    flex-direction: column;
   }
 }
