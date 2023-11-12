@@ -582,8 +582,11 @@ td {
     margin: 0 auto;
   }
 
-  .costumerLogos > .container {
-    padding-left: 0%;
+  .cards > .row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 24px;
+    justify-content: space-between;
   }
 
   .CTA {
@@ -721,7 +724,7 @@ td {
 
   .row {
     max-width: 1024px;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .rightContent {
@@ -729,8 +732,11 @@ td {
     margin: 0 auto;
   }
 
-  .costumerLogos > .container {
-    padding-left: 0%;
+  .cards > .row {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    row-gap: 24px;
+    justify-content: space-between;
   }
 
   .CTA {
