@@ -52,7 +52,6 @@ html {
   display: flex;
   align-items: center;
   gap: 1em;
-  margin-right: 20%;
 }
 
 .toggleMenu {
@@ -76,6 +75,7 @@ html {
   flex-direction: column;
   gap: 24px;
   flex-shrink: 0;
+  padding: 8px;
 }
 
 .hiro > .heading {
@@ -144,7 +144,7 @@ button {
   flex-direction: row;
   align-items: center;
   margin: 0px;
-  gap: 50px;
+  gap: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid var(--gray-700);
@@ -488,7 +488,7 @@ td {
   gap: 1.5em;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 479px) {
   html {
     align-items: center;
     max-width: 480px;
@@ -574,7 +574,6 @@ td {
 
   .row {
     max-width: 480px;
-    margin: 0 auto;
     flex-direction: column;
   }
 
@@ -631,6 +630,149 @@ td {
 
   .footer {
     max-width: 480px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  html {
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .navbarElements {
+    display: none;
+  }
+
+  .navbarLogin {
+    display: none;
+  }
+
+  h1 .heading {
+    max-width: 1024px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .leftContent {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .socialProof {
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .containerCTA > .row img {
+    display: none;
+  }
+
+  .toggleMenu img {
+    display: flex;
+    align-items: right;
+    max-width: 1024px;
+  }
+
+  .hiro {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .hiroButtons {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hiro .leftContent {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .hiro .heading {
+    font-size: 3em;
+    line-height: 30px;
+  }
+
+  .socialProof {
+    max-width: 1024px;
+    margin: 0 auto;
+    gap: 2em;
+  }
+
+  .containerCTA {
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .row {
+    max-width: 1024px;
+    flex-direction: column;
+  }
+
+  .rightContent {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .costumerLogos > .container {
+    padding-left: 0%;
+  }
+
+  .CTA {
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .CTA .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .rightTextCTA {
+    color: var(--gray-400);
+    text-align: right;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  .cards {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+  }
+
+  .contactContainer {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .contactForm {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
+  .footer {
+    max-width: 1024px;
     margin: 0 auto;
     flex-direction: column;
   }
