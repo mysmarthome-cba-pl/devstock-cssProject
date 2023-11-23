@@ -18,11 +18,15 @@ html {
   color: var(--white);
   background: var(--gray-900);
   display: flex;
-  max-width: 1920px;
   font-size: 16px;
   gap: 16px;
   font-family: "Noto Sans", sans-serif;
   font-style: normal;
+}
+
+body {
+  justify-content: center;
+  box-sizing: inherit;
 }
 
 .navbar {
@@ -30,16 +34,23 @@ html {
   padding-top: 24px;
   justify-content: center;
   align-items: center;
-  align-self: stretch;
-  padding: 0% 8%;
 }
 
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  padding-left: 96px;
+  font-weight: 600;
+  line-height: 150%;
+}
 .navbarElements {
   display: flex;
-  width: 1280px;
   align-items: center;
-  padding-left: 5%;
-  gap: 4em;
+  gap: 32px;
+  margin-left: 10px;
+  flex: 1 0 0;
 }
 
 .navbar > .text {
@@ -51,7 +62,8 @@ html {
 .navbarLogin {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 16px;
+  padding-right: 96px;
 }
 
 .toggleMenu {
@@ -60,28 +72,31 @@ html {
 
 .hiro {
   display: flex;
-  width: 1440px;
-  flex-direction: row;
+  padding: 96px 0px;
   align-items: center;
-  margin-left: 100px;
+  justify-content: center;
 }
 
 .container {
   display: flex;
+  max-width: 1280px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .hiro > .leftContent {
+  display: flex;
+  max-width: 576px;
+  gap: 32px;
   flex-direction: column;
-  gap: 24px;
-  flex-shrink: 0;
-  padding: 8px;
+  align-items: flex-start;
 }
 
 .hiro > .heading {
-  font-size: 3em;
-  font-weight: 800;
-  line-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .supporting {
@@ -106,7 +121,7 @@ html {
 }
 
 button {
-  width: 182px;
+  max-width: 182px;
   padding: 12px 20px;
   justify-content: center;
   align-items: center;
@@ -186,14 +201,22 @@ button {
 
 .row {
   display: flex;
-  width: 1280px;
+  max-width: 1280px;
   align-items: center;
   gap: 5em;
 }
 
+.rowElements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .rightContent {
   display: flex;
-  width: 640px;
+  max-width: 640px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
@@ -202,7 +225,7 @@ button {
 
 .costumerLogos {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   padding: 3em;
   flex-direction: column;
   align-items: center;
@@ -218,7 +241,7 @@ button {
 
 .headingDesc {
   display: flex;
-  width: 672px;
+  max-width: 672px;
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -249,7 +272,7 @@ button {
 
 .card {
   display: flex;
-  width: 320px;
+  max-width: 320px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -265,7 +288,7 @@ button {
 
 .CTA {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   padding: 3em;
   flex-direction: column;
   align-items: center;
@@ -274,7 +297,7 @@ button {
 
 .CTA .container {
   display: flex;
-  width: 1280px;
+  max-width: 1280px;
   flex-direction: column;
   align-items: center;
   gap: 32px;
@@ -335,7 +358,7 @@ progress {
 
 .blog {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   padding: 96px 0px;
   flex-direction: column;
   align-items: center;
@@ -343,6 +366,37 @@ progress {
   border-top: 1px solid var(--gray-700);
   border-bottom: 1px solid var(--gray-700);
   background: var(--gray-800);
+}
+
+.section-blog {
+  border-top: 1px solid var(--border-gray);
+  border-bottom: 1px solid var(--border-gray);
+  background: var(--bcg-light_gray);
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto 32px auto;
+}
+
+.blog-title {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 125%;
+}
+
+.blog-description {
+  color: var(--gray-400);
+  text-align: center;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.blog-column {
+  display: flex;
 }
 
 .blogContainer {
@@ -395,12 +449,12 @@ progress {
 
 td {
   padding: 1em;
-  width: 400px;
+  max-width: 400px;
 }
 
 .contact {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   padding: 96px 0px;
   flex-direction: column;
   align-items: center;
@@ -410,7 +464,7 @@ td {
 
 .contactContainer {
   display: flex;
-  width: 1280px;
+  max-width: 1280px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -419,7 +473,7 @@ td {
 
 .contactForm {
   display: flex;
-  width: 640px;
+  max-width: 640px;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5em;
@@ -435,7 +489,7 @@ td {
 
 .contactInput {
   display: flex;
-  width: 45em;
+  max-width: 45em;
   padding: 1em 1em;
   align-items: center;
   gap: 1em;
@@ -488,15 +542,28 @@ td {
   gap: 1.5em;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media only screen and (max-width: 479px) {
   html {
     align-items: center;
     max-width: 480px;
     margin: 0 auto;
   }
 
+  body {
+    width: 100%;
+    margin-left: 10;
+    margin-right: auto;
+  }
+
   .navbarElements {
     display: none;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    align-self: stretch;
   }
 
   .navbarLogin {
@@ -734,7 +801,7 @@ td {
 
   .cards > .row {
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, auto);
     row-gap: 24px;
     justify-content: space-between;
   }
